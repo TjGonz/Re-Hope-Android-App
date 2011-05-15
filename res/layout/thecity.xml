@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/main" xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <WebView android:id="@+id/thecity_webview"
+    android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ProgressBar android:id="@+id/progress" android:layout_width="60dip" android:layout_height="60dip"
+    android:indeterminateOnly="true" android:layout_above="@id/main"
+    android:layout_marginLeft="130dip" android:layout_marginTop="180dip" android:visibility="invisible"
+    />
+</RelativeLayout>

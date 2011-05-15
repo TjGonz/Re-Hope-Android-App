@@ -1,0 +1,17 @@
+The Re:Hope Android App!
+http://rehope.co.uk
+
+With a few tweaks this application can be used for your own church. Here's what you'll need to set up the app:
+
+1. A WordPress blog with the 'rehope' plugin installed and correctly configured. You can find the plugin in the home folder of the repo.
+
+2. Posts created on the blog that are in one of 3 categories:
+	- 'Featured' posts are used for the swipe header on the home tab.  Set up three of these with an image in the post content at 444x158 resolution.  You can optionally set a custom field in the post named 'link' to send the user to a URL or tab when the image is tapped.  Setting the 'link' value to 'events' or 'messages' will load the named tab instead of a URL. 
+	- 'Events' posts are used for the events tab and the two latest events are displayed in the home tab.  Give them an image with a 140x140 resolution, and add a date custom field in this format: '2011-05-15'. Place the content of the event in the 'excerpt' field in WordPress.  You can also provide a city_link custom field to load the event on your Church's city site.  (if you don't use the city, just remove the city tab from the app).
+	- 'Messages' are similar to events, but you can also add an 'mp3_url' custom field so that the app will stream an MP3 when the 'listen now' button is tapped.
+	
+3. On the Android side, change the package name to something else. Then customize your blog's url and GPS coordinates in Home.java.
+
+4. Replace the Re:Hope specific branding with your church's!  (The black, red and blue theme is part of our branding so we'd appreciate it if you used different graphic resources for your app)
+
+5. That's it!

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
+	android:id="@+id/main"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@+id/header" android:layout_width="320dip" android:layout_height="62dip" 
+    android:src="@drawable/home_header" />
+    <view class="co.uk.rehope.android.ReHopeGallery"
+    android:id="@+id/gallery"
+    android:layout_width="298dip"
+    android:layout_height="106dip"
+    android:layout_marginLeft="10dip"
+    android:layout_below="@id/header"
+	/>
+	<RelativeLayout android:id="@+id/events_large" android:layout_width="300dip" android:layout_height="107dip" 
+    android:background="@drawable/home_events_bg_large" android:visibility="invisible" android:layout_below="@id/gallery"
+    android:layout_marginLeft="10dip" android:layout_marginTop="6dip">
+    	<ImageView android:id="@+id/events_square_image" android:layout_width="94dip" android:layout_height="94dip" 
+    	android:layout_above="@id/events_large"
+    	android:layout_marginLeft="6dip" android:layout_marginTop="6dip" android:src="@drawable/home_news_square" />
+    	<ImageView android:id="@+id/events_square_highlight" android:layout_above="@id/events_large" 
+    	android:layout_width="94dip" android:layout_height="94dip" android:src="@drawable/home_news_square_highlight"
+    	android:layout_marginLeft="6dip" android:layout_marginTop="6dip" />
+    	<TextView android:id="@+id/events_home_date_digits" android:layout_above="@id/events_large" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:layout_marginLeft="190dip"
+    	android:layout_marginTop="10dip" android:shadowColor="#000000" android:textSize="18dip"
+    	android:shadowDx="0" android:shadowDy="-2" android:shadowRadius="2"
+    	android:textStyle="bold"
+    	></TextView>
+    	<TextView android:id="@+id/events_home_date_month_name" android:layout_toRightOf="@id/events_home_date_digits" android:layout_alignBaseline="@id/events_home_date_digits" 
+    	android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:shadowColor="#000000" android:textSize="12dip"
+    	android:shadowDx="0" android:shadowDy="-2" android:shadowRadius="2" android:layout_marginLeft="6dip"
+    	></TextView>
+	    <TextView android:id="@+id/events_home_event_title" android:layout_above="@id/events_large" 
+	    android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="113dip"
+	    android:layout_marginTop="34dip" android:textColor="#FFFFFF" android:shadowColor="#000000" 
+	    android:textSize="16dip"
+	    ></TextView>
+	    <TextView android:id="@+id/events_home_event_content" android:layout_below="@id/events_home_event_title" android:layout_marginLeft="114dip"
+	    android:layout_width="180dip" android:layout_height="wrap_content"
+	    android:layout_marginTop="2dip" android:maxLines="3" android:ellipsize="end" android:textColor="#DDDDDD" android:shadowColor="#000000" 
+	    android:textSize="12dip"
+	    ></TextView>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/events_small" android:visibility="invisible"
+    android:layout_width="300dip" android:layout_height="55dip" android:background="@drawable/home_small_news_bg"
+    android:layout_marginLeft="10dip" android:layout_marginTop="8dip" android:layout_below="@id/events_large">
+	    <ImageView android:id="@+id/events_small_square_image" android:layout_width="47dip" android:layout_height="47dip" 
+	    android:layout_above="@id/events_small"
+	    android:layout_marginLeft="3dip" android:layout_marginTop="3dip" android:src="@drawable/home_news_square" />
+	    <ImageView android:id="@+id/events_small_square_highlight" android:layout_above="@id/events_small" 
+	    android:layout_width="47dip" android:layout_height="47dip" android:src="@drawable/home_news_square_highlight"
+	    android:layout_marginLeft="3dip" android:layout_marginTop="3dip" />
+	    <TextView android:id="@+id/events_home_small_date_digits" android:layout_above="@id/events_small" android:layout_width="wrap_content" android:layout_height="wrap_content"
+	    android:textColor="#FFFFFF" android:layout_marginLeft="268dip"
+	    android:layout_marginTop="8dip" android:shadowColor="#000000" android:textSize="18dip"
+	    android:shadowDx="0" android:shadowDy="-2" android:shadowRadius="2"
+	    android:textStyle="bold"
+	    ></TextView>
+	    <TextView android:id="@+id/events_home_small_date_month_name" android:layout_below="@id/events_home_small_date_digits" 
+	    android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:shadowColor="#000000" android:textSize="12dip"
+	    android:shadowDx="0" android:shadowDy="-2" android:shadowRadius="2" android:layout_marginLeft="266dip"
+	    ></TextView>
+	    <TextView android:id="@+id/events_home_small_event_title" android:layout_above="@id/events_large" 
+	    android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="64dip"
+	    android:layout_marginTop="15dip" android:textColor="#FFFFFF" android:shadowColor="#000000" 
+	    android:textSize="16dip"
+	    ></TextView>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/home_footer" android:visibility="invisible" android:layout_below="@id/events_small"
+    android:layout_width="320dip" android:layout_height="120dip" android:background="@drawable/home_footer_bg"
+    android:layout_marginTop="8dip">
+    <TextView android:id="@+id/home_footer_next_service"
+	    android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40dip"
+	    android:layout_marginTop="12dip"
+	    android:text="The next service begins in:" android:textColor="#FFFFFF" android:shadowColor="#000000" 
+	    android:textSize="14dip" android:layout_marginBottom="-4dip"
+	    ></TextView>
+	<TextView android:id="@+id/home_footer_hours_digit"
+	    android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40dip"
+	    android:layout_marginTop="0dip" android:layout_below="@id/home_footer_next_service"
+	    android:text="" android:textColor="#FFFFFF" android:shadowColor="#000000" android:textStyle="bold"
+	    android:textSize="30dip"
+	    ></TextView>
+	    <TextView android:id="@+id/home_footer_hours_label"
+	    android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_toRightOf="@id/home_footer_hours_digit" android:layout_alignBaseline="@id/home_footer_hours_digit"
+	    android:text="hrs" android:textColor="#FFFFFF" android:shadowColor="#000000" android:layout_marginLeft="2dip"
+	    android:textSize="16dip"
+	    ></TextView>
+	    <TextView android:id="@+id/home_footer_minutes_digit"
+	    android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_toRightOf="@id/home_footer_hours_label" android:layout_alignBaseline="@id/home_footer_hours_label"
+	    android:text="" android:textColor="#FFFFFF" android:shadowColor="#000000" 
+	    android:textSize="30dip" android:layout_marginLeft="10dip" android:textStyle="bold"
+	    ></TextView>
+	    <TextView android:id="@+id/home_footer_minutes_label"
+	    android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_toRightOf="@id/home_footer_minutes_digit" android:layout_alignBaseline="@id/home_footer_minutes_digit"
+	    android:text="mins" android:textColor="#FFFFFF" android:shadowColor="#000000" android:layout_marginLeft="2dip"
+	    android:textSize="16dip"
+	    ></TextView>
+	    <TextView android:id="@+id/home_footer_seconds_digit"
+	    android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_toRightOf="@id/home_footer_minutes_label" android:layout_alignBaseline="@id/home_footer_minutes_label"
+	    android:text="" android:textColor="#FFFFFF" android:shadowColor="#000000" 
+	    android:textSize="30dip" android:layout_marginLeft="10dip" android:textStyle="bold"
+	    ></TextView>
+	    <TextView android:id="@+id/home_footer_seconds_label"
+	    android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_toRightOf="@id/home_footer_seconds_digit" android:layout_alignBaseline="@id/home_footer_seconds_digit"
+	    android:text="secs" android:textColor="#FFFFFF" android:shadowColor="#000000" android:layout_marginLeft="2dip"
+	    android:textSize="16dip"
+	    ></TextView>
+	    <RelativeLayout android:id="@+id/home_footer_loc" android:onClick="locationClickHandler"
+    android:layout_width="fill_parent" android:layout_height="wrap_content" 
+    android:layout_above="@id/home_footer" android:layout_marginLeft="40dip" android:layout_marginTop="70dip">
+    	<ImageView android:id="@+id/home_footer_loc_pin" android:layout_width="11dip" android:layout_height="17dip" 
+	     android:src="@drawable/pin" />
+	     <TextView android:id="@+id/home_footer_loc_label"
+	    android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_toRightOf="@id/home_footer_loc_pin" android:layout_alignBaseline="@id/home_footer_seconds_digit"
+	    android:text="Loading..." android:textColor="#FFFFFF" android:shadowColor="#000000" android:layout_marginLeft="8dip"
+	    android:textSize="16dip"
+	    ></TextView>
+    	</RelativeLayout>
+    </RelativeLayout>
+    <ProgressBar android:id="@+id/progress" android:layout_width="60dip" android:layout_height="60dip"
+    android:indeterminateOnly="true" android:layout_above="@id/main"
+    android:layout_marginLeft="130dip" android:layout_marginTop="180dip" android:visibility="invisible"
+    />
+</RelativeLayout>
